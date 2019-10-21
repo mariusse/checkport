@@ -19,10 +19,10 @@ func main() {
 	fmt.Println("Timeout is set to ", timeout, " seconds.")
 	for _, v := range URIs {
 		if isPortOpen(v) {
-			fmt.Printf("%s \t OK\n", v)
+			fmt.Printf("OK %s\n", v)
 			continue
 		}
-		fmt.Printf("%s \t x\n", v)
+		fmt.Printf("X %s\n", v)
 	}
 }
 
