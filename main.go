@@ -28,8 +28,8 @@ func main() {
 
 func isPortOpen(uri string) bool {
 	_, err := net.DialTimeout("tcp", uri, timeout)
-	if err == nil {
-		return true
+	if err != nil {
+		return false
 	}
-	return false
+	return true
 }
